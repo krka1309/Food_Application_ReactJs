@@ -1,0 +1,14 @@
+.navbarMainDiv {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.linktag {
+  padding: 12px;
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+}
+.linktag:hover {
+  color: #c738bd;
+}
