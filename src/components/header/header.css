@@ -1,0 +1,13 @@
+.mainDiv {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  margin-top: 4px;
+  margin-left: 0px;
+}
+
+.restaurantImg {
+  cursor: pointer;
+  width: 7%;
+  margin: 4px;
+}
