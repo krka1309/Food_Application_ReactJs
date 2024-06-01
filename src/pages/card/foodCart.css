@@ -1,0 +1,24 @@
+.foodCart {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 140px;
+}
+.foodImage {
+  width: 3rem;
+  margin-right: 12px;
+}
+.childDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 40px;
+  background-color: bisque;
+  transition: transform 0.3s ease;
+}
+.title {
+  font-size: 18px;
+}
+.childDiv:hover {
+  /* transition: ease-in; */
+  transform: scale(1.2);
+}

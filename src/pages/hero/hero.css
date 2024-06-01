@@ -1,0 +1,50 @@
+.heroMainDiv {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 40px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.boy {
+  display: flex;
+}
+.boyImage {
+  width: 400px;
+}
+.orderParagraph {
+  font-size: 26px;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+.word {
+  font-size: 24px;
+  font-weight: 800;
+  color: red;
+}
+.doorTitle {
+  font-size: 20px;
+  font-weight: 700;
+}
+.orderBtn {
+  background: #10b981;
+  cursor: pointer;
+  border: none;
+  font-size: 14px;
+  padding: 12px 34px;
+  margin: 6px 10px 0px 0px;
+}
+.seeFoodBtn {
+  cursor: pointer;
+  background: none;
+  border: 2px solid red;
+  padding: 10px 34px;
+  margin: 6px 10px 0px 0px;
+}
+.orderBtn:hover {
+  color: black;
+  font-weight: 600;
+  background: red;
+}
+.seeFoodBtn:hover {
+  color: red;
+}
