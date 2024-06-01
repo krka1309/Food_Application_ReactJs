@@ -13,7 +13,7 @@ const Card = () => {
       />
       <div />
       <div className={cartOpen ? "cartOpen" : "cartClose"}>
-        <p>Shopping list</p>
+        <p className="title">Shopping list</p>
         <AiOutlineClose
           onClick={() => setCartOpen(false)}
           className="outlineIcon"
