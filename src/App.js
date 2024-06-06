@@ -2,7 +2,6 @@ import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/home/home";
 import Food from "./pages/food/food";
-import Cart from "./pages/cart/cart";
 import Contact from "./pages/contact/contact";
 import Header from "./components/header/header";
 import Card from "./pages/cart/cart";

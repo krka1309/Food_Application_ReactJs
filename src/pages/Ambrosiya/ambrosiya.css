@@ -1,0 +1,36 @@
+.aboutUs {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 50px;
+}
+.why {
+  display: flex;
+  /* position: absolute; */
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+  margin-top: 40px;
+}
+.whyImage {
+  height: 300px;
+  width: 515px;
+  object-fit: cover;
+}
+.whyParagraph {
+  font-size: 14px;
+}
+.heading {
+  position: relative;
+  margin-left: 190px;
+  font-size: 28px;
+  font-weight: 600;
+}
+.listStyle {
+  text-decoration: none;
+  list-style: none;
+  margin-top: 12px;
+}
+.tickeIcon {
+  margin-right: 4px;
+}

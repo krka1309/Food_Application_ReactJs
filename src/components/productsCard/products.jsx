@@ -8,7 +8,19 @@ const Products = (props) => {
       <div className="productsChildDiv">
         <div className="childDiv2">
           <img src={image01} className="productImage" />
-          <Link>{title}</Link>
+          <Link
+            style={{
+              color: "black",
+              listStyleType: "none",
+              textDecoration: "none",
+            }}
+          >
+            {title}
+          </Link>
+          <div className="addToCartDiv">
+            <span style={{ color: "rgb(220 38 38)" }}>${price}</span>
+            <button className="addToCartBtn">Add To Cart</button>
+          </div>
         </div>
       </div>
     </div>

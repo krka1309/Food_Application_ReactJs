@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "../../components/header/header";
 import boy from "../../assets/images/boyA.jpeg";
 import "./hero.css";
 
@@ -19,7 +18,7 @@ const Hero = () => {
         </p>
       </div>
 
-      <img src={boy} className="boyImage" />
+      <img src={boy} className="boyImage" alt="" />
     </div>
   );
 };
