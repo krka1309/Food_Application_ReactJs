@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import Header from "../../components/header/header";
-import boy from "../../assets/images/boyA.jpeg";
 import "./home.css";
 import Hero from "../hero/hero";
 import FoodCard from "../card/foodCard";
@@ -10,6 +8,7 @@ import bread from "../../assets/imagesAll/bread.png";
 import products from "../../assets/fake-data/products";
 import Delivery from "../hero/delivery";
 import Products from "../../components/productsCard/products";
+import Ambrosiya from "../Ambrosiya/ambrosiya";
 
 const Home = () => {
   const [allProducts, setAllProducts] = useState(products);
@@ -23,15 +22,15 @@ const Home = () => {
         <div className="childDiv1">
           <button className="titleAll">All</button>
           <button className="titleImages">
-            <img src={burger} />
+            <img src={burger} alt="" />
             Burger
           </button>
           <button className="titleImages">
-            <img src={pizza} />
+            <img src={pizza} alt="" />
             Pizza
           </button>
           <button className="titleImages">
-            <img src={bread} />
+            <img src={bread} alt="" />
             Bread
           </button>
         </div>
@@ -43,6 +42,7 @@ const Home = () => {
           })}
         </div>
       </div>
+      <Ambrosiya />
     </div>
   );
 };
