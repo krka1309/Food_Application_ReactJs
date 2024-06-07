@@ -1,0 +1,44 @@
+.allFood {
+  display: flex;
+  height: 150px;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(107 114 128);
+  width: 100%;
+  font-size: 28px;
+  color: white;
+  font-weight: 700;
+}
+.filterItems {
+  margin-top: 40px;
+  margin-left: 80px;
+}
+.inputFilter {
+  border-radius: 8px;
+  width: 320px;
+  border: 1px solid lightgray;
+  padding-left: 16px;
+  color: red;
+  font-size: 16px;
+  height: 45px;
+}
+.productsContainer1 {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 250px 250px 250px 250px;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}
+.mainDivFood {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.childDivFood {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
