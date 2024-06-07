@@ -9,6 +9,7 @@ import products from "../../assets/fake-data/products";
 import Delivery from "../hero/delivery";
 import Products from "../../components/productsCard/products";
 import Ambrosiya from "../Ambrosiya/ambrosiya";
+import Reviews from "../reviews/reviews";
 
 const Home = () => {
   const [allProducts, setAllProducts] = useState(products);
@@ -43,6 +44,7 @@ const Home = () => {
         </div>
       </div>
       <Ambrosiya />
+      <Reviews />
     </div>
   );
 };
