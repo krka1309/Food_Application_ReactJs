@@ -1,0 +1,50 @@
+.reviewPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+  flex-direction: column;
+}
+.Testimonial {
+  font-size: 28px;
+  color: red;
+  font-weight: 600;
+}
+.customers {
+  font-size: 28px;
+  color: red;
+}
+.custom {
+  font-size: 28px;
+  font-size: 600;
+}
+.renderImage {
+  margin-top: 60px;
+  width: 600px;
+  height: auto;
+  object-fit: cover;
+}
+.imageText {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  bottom: 90px;
+  color: white;
+  background-color: rgb(31 41 55);
+  opacity: 0.75;
+  width: 600px;
+  height: 90px;
+}
+.reviewChild {
+  display: flex;
+  flex-direction: column;
+}
+.OutlineIcons {
+  height: 35px;
+  width: 40px;
+  cursor: pointer;
+}
+.imageText span {
+  padding: 16px;
+}
