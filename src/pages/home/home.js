@@ -21,7 +21,7 @@ const Home = () => {
       <Delivery />
       <div className="homeMainHeadline">
         <h2>Popular Foods</h2>
-        <div className="childDiv1">
+        <div className="childDiv10">
           <button className="titleAll">All</button>
           <button className="titleImages">
             <img src={burger} alt="" />

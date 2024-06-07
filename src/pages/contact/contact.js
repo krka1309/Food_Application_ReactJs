@@ -21,7 +21,7 @@ const Contact = () => {
             </p>
           </div>
         </div>
-        <div className="childDiv2">
+        <div className="childDiv22">
           <div className="childDiv21">
             <p>
               <span className="deli">Delivery Time</span> <br />
