@@ -14,7 +14,6 @@ const Food = () => {
     dispatch(filterProducts(e.target.value));
   };
   let selector = useSelector((state) => state.productReducer.searchText);
-  console.log(selector);
 
   useEffect(() => {
     if (selector.length === 0) {
@@ -24,7 +23,7 @@ const Food = () => {
         products.filter((item) => item.title.toLowerCase().includes(selector))
       );
     }
-  }, [selector, products]);
+  }, [selector]);
   return (
     <div>
       <div className="mainDivFood">
@@ -39,8 +38,8 @@ const Food = () => {
         </div>
 
         <div className="productsContainer1">
-          {allProducts.map((item) => {
-            return <Products item={item} />;
+          {allProducts.map((item, index) => {
+            return <Products key={index} item={item} />;
           })}
         </div>
       </div>

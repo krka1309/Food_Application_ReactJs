@@ -63,6 +63,7 @@
   border: 2px solid black;
   border-radius: 12px;
   padding: 9px;
+  cursor: pointer;
 }
 .quantity {
   position: absolute;

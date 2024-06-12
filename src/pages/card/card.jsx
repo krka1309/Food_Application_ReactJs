@@ -8,8 +8,6 @@ const Card = () => {
   const [cartOpen, setCartOpen] = useState(false);
   let totalQuantity = useSelector((state) => state.productReducer.quantity);
   let items = useSelector((state) => state.productReducer.cartItems);
-  console.log("items", items);
-  console.log("totalQuantity", totalQuantity);
   return (
     <div className="cartMainDiv">
       <BiShoppingBag
@@ -29,8 +27,8 @@ const Card = () => {
           />
         </div>
         <div className="itemsP">
-          {items.map((item) => {
-            return <Carts items={item} />;
+          {items.map((item, index) => {
+            return <Carts key={index} items={item} />;
           })}
         </div>
         <div className="Subtotal">

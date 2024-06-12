@@ -23,7 +23,7 @@ const Products = (props) => {
     <div className="productsMainDIv">
       <div className="productsChildDiv">
         <div className="childDiv2">
-          <img src={image01} className="productImage" />
+          <img src={image01} alt="image01" className="productImage" />
           <Link
             style={{
               color: "black",

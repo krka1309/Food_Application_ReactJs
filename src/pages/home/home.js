@@ -39,8 +39,8 @@ const Home = () => {
       </div>
       <div className="productMainContainer">
         <div className="productsContainer">
-          {allProducts.map((item) => {
-            return <Products item={item} />;
+          {allProducts.map((item, index) => {
+            return <Products key={index} item={item} />;
           })}
         </div>
       </div>

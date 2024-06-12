@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { CiCirclePlus } from "react-icons/ci";
-import { addToCart, increment, removeItem } from "../../store/productSlice";
+import { addToCart, removeItem } from "../../store/productSlice";
 import { CiCircleMinus } from "react-icons/ci";
 import "./carts.css";
 const Carts = (props) => {
@@ -9,7 +9,6 @@ const Carts = (props) => {
   const products = useSelector((state) => state.productReducer.cartItems);
   let dispatch = useDispatch();
   const handleIncrement = () => {
-    // dispatch(addToCart({}));
     dispatch(
       addToCart({
         id,
