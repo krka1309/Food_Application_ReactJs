@@ -1,9 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
 const items = [];
 const quantity = 0;
+let searchText = "";
 var initialState = {
   cartItems: items,
   quantity: quantity,
+  searchText: searchText,
 };
 export const productSlice = createSlice({
   name: "products",
@@ -50,9 +52,17 @@ export const productSlice = createSlice({
         (item) => item.id !== existingItem.id
       );
     },
+    filterProducts: (state, action) => {
+      state.searchText = action.payload;
+    },
   },
 });
 
-export const { addToCart, increment, removeItem, deleteProduct } =
-  productSlice.actions;
+export const {
+  addToCart,
+  increment,
+  removeItem,
+  deleteProduct,
+  filterProducts,
+} = productSlice.actions;
 export default productSlice.reducer;
