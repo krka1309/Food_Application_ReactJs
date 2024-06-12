@@ -12,6 +12,7 @@ import Paper from "@mui/material/Paper";
 import CloseIcon from "@mui/icons-material/Close";
 import { deleteProduct } from "../../store/productSlice";
 import handIcon from "../../assets/images/hand.png";
+import { Link } from "react-router-dom";
 const Cart = () => {
   const products = useSelector((state) => state.productReducer.cartItems);
 
@@ -169,6 +170,22 @@ const Cart = () => {
               </TableBody>
             </Table>
           </TableContainer>
+          <div className="taxMainDiv">
+            <div className="taxChildDiv">
+              <span style={{ fontSize: "28px" }}>
+                <b>Subtotal:</b> $110
+              </span>
+              <p>Taxes and shipping will calculate at checkout</p>
+              <div>
+                <Link to={"/food"}>
+                  <button className="btnClass">Continue Shopping</button>
+                </Link>
+                <Link to={"/"}>
+                  <button className="btnClass">Proceed to checkout</button>
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       )}
     </div>

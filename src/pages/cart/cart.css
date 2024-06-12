@@ -57,3 +57,26 @@
   padding: 2px;
   transform: rotate(180deg);
 }
+.taxChildDiv {
+  display: flex;
+  height: 180px;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.taxMainDiv {
+  display: flex;
+  padding: 20px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.btnClass {
+  height: 40px;
+  width: 160px;
+  margin: 4px;
+  background-color: #f8c794;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
