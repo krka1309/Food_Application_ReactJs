@@ -11,9 +11,10 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import CloseIcon from "@mui/icons-material/Close";
 import { deleteProduct } from "../../store/productSlice";
+import handIcon from "../../assets/images/hand.png";
 const Cart = () => {
   const products = useSelector((state) => state.productReducer.cartItems);
-  // let id= products.findIndex()
+
   let dispatch = useDispatch();
   const handleRemove = (id) => {
     dispatch(deleteProduct(id));
@@ -22,12 +23,15 @@ const Cart = () => {
     <div>
       {products.length === 0 ? (
         <div>
-          <div className="cartMainDiv1">Your Cart</div>
+          <div className="cartMainDiv1">
+            Your Cart <img src={handIcon} alt="" className="handIcon" />
+          </div>
           <div className="cartMainDiv11">No Items Added here</div>
           <Contact />
         </div>
       ) : (
         <div className="tableDiv">
+          <div className="cartMainDiv13">Your Cart</div>
           <TableContainer
             component={Paper}
             style={{
@@ -152,7 +156,11 @@ const Cart = () => {
                       }}
                     >
                       <CloseIcon
-                        sx={{ width: "30px", height: "30px" }}
+                        sx={{
+                          width: "30px",
+                          height: "30px",
+                          cursor: "pointer",
+                        }}
                         onClick={() => handleRemove(row.id)}
                       />
                     </TableCell>
