@@ -1,34 +1,61 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { CiCirclePlus } from "react-icons/ci";
+import { addToCart, increment, removeItem } from "../../store/productSlice";
 import { CiCircleMinus } from "react-icons/ci";
 import "./carts.css";
-const Carts = () => {
+const Carts = (props) => {
+  const { id, price, image01, title, quantity } = props.items;
   const products = useSelector((state) => state.productReducer.cartItems);
+  let dispatch = useDispatch();
+  const handleIncrement = () => {
+    // dispatch(addToCart({}));
+    dispatch(
+      addToCart({
+        id,
+        price,
+        image01,
+        title,
+      })
+    );
+  };
+  const handleDelete = () => {
+    dispatch(
+      removeItem({
+        id,
+        quantity,
+      })
+    );
+  };
   return (
     <div>
       <div>
-        {products.length == 0 ? (
+        {products.length === 0 ? (
           <div>No products added</div>
         ) : (
           <div>
-            {products.map((item) => {
-              return (
-                <div className="cartMainDivP">
-                  <div className="cartItems">
-                    <img src={item.image01} alt="" className="prodImg" />
-                    <div className="productValue">
-                      <span className="prodTitle">{item.title}</span>
-                      <span className="prodPrice">$ {item.price}</span>
-                    </div>
-                    <div className="productIcons">
-                      <CiCirclePlus className="circleIcon" />
-                      <CiCircleMinus className="circleIcon" />
-                    </div>
-                  </div>
+            <div className="cartMainDivP">
+              <div className="cartItems">
+                <img src={image01} alt="" className="prodImg" />
+                <div className="productValue">
+                  <span className="prodTitle">{title}</span>
+                  <span className="prodPrice">$ {price}</span>
                 </div>
-              );
-            })}{" "}
+                {/* <div className="productQty"> */}
+                <div className="productIcons">
+                  <CiCirclePlus
+                    className="circleIcon"
+                    onClick={handleIncrement}
+                  />
+                  <div className="qty">{quantity}</div>
+                  <CiCircleMinus
+                    className="circleIcon"
+                    onClick={handleDelete}
+                  />
+                </div>
+                {/* </div> */}
+              </div>
+            </div>
           </div>
         )}
       </div>

@@ -36,6 +36,7 @@
 .cartMainDivP {
 }
 .productIcons {
+  /* padding: 16px; */
   align-items: center;
   height: 0px;
   display: flex;
@@ -47,4 +48,15 @@
 .circleIcon {
   height: 26px;
   width: 26px;
+}
+.productQty {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.qty {
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

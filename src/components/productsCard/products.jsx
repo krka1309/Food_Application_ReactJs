@@ -1,15 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./products.css";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addToCart } from "../../store/productSlice";
 const Products = (props) => {
-  const { id, title, price, image01 } = props.item;
+  const { id, title, price, image01, quantity } = props.item;
   let dispatch = useDispatch();
-  let selector = useSelector((state) => state.productReducer.cartItems);
-  selector.map((item) => {
-    console.log(process.env.PUBLIC_URL + item.image01);
-  });
 
   const handleAdd = () => {
     dispatch(
@@ -18,6 +14,7 @@ const Products = (props) => {
         title,
         image01,
         price,
+        quantity,
       })
     );
   };
