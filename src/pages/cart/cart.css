@@ -16,3 +16,23 @@
   justify-content: center;
   align-items: center;
 }
+
+.cartMainDiv12 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cartChildDiv12 {
+  display: grid;
+  grid-template-columns: 120px 120px 120px 120px 120px;
+}
+.prodImg {
+  width: 70px;
+  height: 70px;
+}
+.tableDiv {
+  background-color: antiquewhite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
