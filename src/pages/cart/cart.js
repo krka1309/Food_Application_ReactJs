@@ -1,7 +1,7 @@
 import React from "react";
 import "./cart.css";
 import Contact from "../contact/contact";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -9,8 +9,15 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
+import CloseIcon from "@mui/icons-material/Close";
+import { deleteProduct } from "../../store/productSlice";
 const Cart = () => {
   const products = useSelector((state) => state.productReducer.cartItems);
+  // let id= products.findIndex()
+  let dispatch = useDispatch();
+  const handleRemove = (id) => {
+    dispatch(deleteProduct(id));
+  };
   return (
     <div>
       {products.length === 0 ? (
@@ -144,7 +151,10 @@ const Cart = () => {
                         paddingBottom: 0,
                       }}
                     >
-                      ✔️
+                      <CloseIcon
+                        sx={{ width: "30px", height: "30px" }}
+                        onClick={() => handleRemove(row.id)}
+                      />
                     </TableCell>
                   </TableRow>
                 ))}
