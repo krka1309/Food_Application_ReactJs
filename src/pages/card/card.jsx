@@ -8,8 +8,7 @@ const Card = () => {
   const [cartOpen, setCartOpen] = useState(false);
   let totalQuantity = useSelector((state) => state.productReducer.quantity);
   let cartItems = useSelector((state) => state.productReducer.cartItems);
-  const sumTotal = (cartItems) =>
-    cartItems.reduce((sum, { price, quantity }) => sum + price * quantity, 0);
+  let subTotal = useSelector((state) => state.productReducer.sumTotal);
   let items = useSelector((state) => state.productReducer.cartItems);
   return (
     <div className="cartMainDiv">
@@ -37,7 +36,7 @@ const Card = () => {
         <div className="Subtotal">
           <p>
             Subtotal:
-            <span> ${sumTotal(cartItems)}</span>
+            <span> ${subTotal}</span>
           </p>
           <span className="checkout">Checkout</span>
         </div>
