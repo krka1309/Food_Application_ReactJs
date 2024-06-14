@@ -1,11 +1,16 @@
 import { createSlice } from "@reduxjs/toolkit";
 const items = [];
 const quantity = 0;
+const totalPrice = 0;
+const sumTotal = 0;
 let searchText = "";
+
 var initialState = {
   cartItems: items,
   quantity: quantity,
   searchText: searchText,
+  totalPrices: totalPrice,
+  sumTotal: sumTotal,
 };
 export const productSlice = createSlice({
   name: "products",
@@ -17,6 +22,11 @@ export const productSlice = createSlice({
         (item) => item.id === newItem.id
       );
       state.quantity += 1;
+      state.sumTotal = (cartItems) =>
+        cartItems.reduce(
+          (sum, { price, quantity }) => sum + price * quantity,
+          0
+        );
       if (!existingItem) {
         state.cartItems.push({
           id: newItem.id,
@@ -24,21 +34,21 @@ export const productSlice = createSlice({
           image01: newItem.image01,
           price: newItem.price,
           quantity: 1,
+          totalPrice: newItem.price,
         });
       } else {
-        existingItem.quantity++;
+        existingItem.quantity += 1;
+        existingItem.totalPrice = existingItem.price * existingItem.quantity;
       }
     },
     removeItem: (state, action) => {
       const newItem = action.payload;
-      // state.cartItems = state.cartItems.filter(
-      //   (item) => item.id !== newItem.id
-      // );
       const existingItem = state.cartItems.find(
         (item) => item.id === newItem.id
       );
       if (existingItem.quantity > 1) {
         existingItem.quantity -= 1;
+        existingItem.totalPrice = existingItem.price * existingItem.quantity;
       } else {
         state.cartItems = state.cartItems.filter(
           (item) => item.id !== existingItem.id

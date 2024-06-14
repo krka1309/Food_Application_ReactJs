@@ -5,14 +5,14 @@ import { addToCart, removeItem } from "../../store/productSlice";
 import { CiCircleMinus } from "react-icons/ci";
 import "./carts.css";
 const Carts = (props) => {
-  const { id, price, image01, title, quantity } = props.items;
+  const { id, price, image01, title, quantity, totalPrice } = props.items;
   const products = useSelector((state) => state.productReducer.cartItems);
   let dispatch = useDispatch();
   const handleIncrement = () => {
     dispatch(
       addToCart({
         id,
-        price,
+        totalPrice,
         image01,
         title,
       })
@@ -38,7 +38,7 @@ const Carts = (props) => {
                 <img src={image01} alt="" className="prodImg" />
                 <div className="productValue">
                   <span className="prodTitle">{title}</span>
-                  <span className="prodPrice">$ {price}</span>
+                  <span className="prodPrice">$ {totalPrice}</span>
                 </div>
                 {/* <div className="productQty"> */}
                 <div className="productIcons">
