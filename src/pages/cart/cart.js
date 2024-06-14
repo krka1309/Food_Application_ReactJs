@@ -15,7 +15,7 @@ import handIcon from "../../assets/images/hand.png";
 import { Link } from "react-router-dom";
 const Cart = () => {
   const products = useSelector((state) => state.productReducer.cartItems);
-
+  let subTotal = useSelector((state) => state.productReducer.sumTotal);
   let dispatch = useDispatch();
   const handleRemove = (id) => {
     dispatch(deleteProduct(id));
@@ -173,7 +173,7 @@ const Cart = () => {
           <div className="taxMainDiv">
             <div className="taxChildDiv">
               <span style={{ fontSize: "28px" }}>
-                <b>Subtotal:</b> $110
+                <b>Subtotal:</b> ${subTotal}
               </span>
               <p>Taxes and shipping will calculate at checkout</p>
               <div>
