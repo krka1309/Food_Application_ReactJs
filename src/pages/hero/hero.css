@@ -5,6 +5,13 @@
   align-items: center;
   margin-bottom: 40px;
 }
+@media (max-width: 742px) {
+  .heroMainDiv {
+    display: flex;
+    flex-direction: column;
+    margin: 24px;
+  }
+}
 .boy {
   display: flex;
 }

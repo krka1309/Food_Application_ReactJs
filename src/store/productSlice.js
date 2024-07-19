@@ -64,6 +64,10 @@ export const productSlice = createSlice({
       state.cartItems = state.cartItems.filter(
         (item) => item.id !== existingItem.id
       );
+      state.sumTotal = state.cartItems.reduce(
+        (sum, { price, quantity }) => sum + price * quantity,
+        0
+      );
     },
     filterProducts: (state, action) => {
       state.searchText = action.payload;
