@@ -123,6 +123,7 @@
   justify-content: space-around;
 }
 .widthIc {
+  cursor: pointer;
   width: 25px;
   height: 25px;
 }
@@ -135,6 +136,7 @@
 }
 .inputtag {
   width: 250px;
+  padding: 12px;
   padding-right: 30px; /* Adjust the padding to make space for the icon */
   box-sizing: border-box; /* Ensure padding is included in the total width */
 }

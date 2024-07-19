@@ -10,13 +10,22 @@ import Food from "./pages/food/food";
 import Contact from "./pages/contact/contact";
 import Header from "./components/header/header";
 import Card from "./pages/cart/cart";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
   const navigate = useNavigate();
+  const [users, setUsers] = useState([]);
   useEffect(() => {
     navigate("/");
+    const fetchData = async () => {
+      // const res = await fetch("http://localhost:3001/menu");
+      // const data = await res.json();
+      // console.log("res", data);
+      // setUsers(data);
+    };
+    // fetchData();
   }, []);
+  // console.log(users.item);
   return (
     <div className="App">
       <Header />

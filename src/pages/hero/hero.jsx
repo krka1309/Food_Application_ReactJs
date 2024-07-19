@@ -1,8 +1,13 @@
 import React from "react";
 import boy from "../../assets/images/boyA.jpeg";
 import "./hero.css";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+  let navigate = useNavigate();
+  const handleNavigate = () => {
+    navigate("/food");
+  };
   return (
     <div className="heroMainDiv">
       <div>
@@ -14,7 +19,9 @@ const Hero = () => {
         <span className="doorTitle">food at your door</span>
         <p>
           <button className="orderBtn">Order Now</button>
-          <button className="seeFoodBtn">See all foods</button>
+          <button className="seeFoodBtn" onClick={handleNavigate}>
+            See all foods
+          </button>
         </p>
       </div>
 

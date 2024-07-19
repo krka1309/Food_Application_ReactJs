@@ -51,7 +51,7 @@ const Contact = () => {
               Subscribe our newsletter
             </p>
             <div className="inputContainer">
-              <input type="input" className="inputtag" />{" "}
+              <input type="input" className="inputtag" />
               <FiSend className="sendIcon" />
             </div>
           </div>
