@@ -13,6 +13,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import { deleteProduct } from "../../store/productSlice";
 import handIcon from "../../assets/images/hand.png";
 import { Link } from "react-router-dom";
+import { red } from "@mui/material/colors";
 const Cart = () => {
   const products = useSelector((state) => state.productReducer.cartItems);
   let subTotal = useSelector((state) => state.productReducer.sumTotal);
@@ -32,7 +33,9 @@ const Cart = () => {
         </div>
       ) : (
         <div className="tableDiv">
-          <div className="cartMainDiv13">Your Cart</div>
+          <div className="cartMainDiv13">
+            Your Cart <img src={handIcon} alt="" className="handIcon" />
+          </div>
           <TableContainer
             component={Paper}
             style={{
@@ -124,6 +127,8 @@ const Cart = () => {
                         border: "1px solid black",
                         paddingTop: 0.8,
                         paddingBottom: 0,
+                        fontWeight: 700,
+                        fontSize: 15,
                       }}
                     >
                       {row.title}
@@ -134,6 +139,7 @@ const Cart = () => {
                         border: "1px solid black",
                         paddingTop: 0.8,
                         paddingBottom: 0,
+                        fontWeight: 700,
                       }}
                     >
                       {row.price}
@@ -144,6 +150,7 @@ const Cart = () => {
                         border: "1px solid black",
                         paddingTop: 0,
                         paddingBottom: 0,
+                        fontWeight: 700,
                       }}
                     >
                       {row.quantity}
@@ -175,7 +182,7 @@ const Cart = () => {
               <span style={{ fontSize: "28px" }}>
                 <b>Subtotal:</b> ${subTotal}
               </span>
-              <p>Taxes and shipping will calculate at checkout</p>
+              <p>Taxes and shipping will be calculate at checkout</p>
               <div>
                 <Link to={"/food"}>
                   <button className="btnClass">Continue Shopping</button>

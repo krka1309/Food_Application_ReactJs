@@ -4,12 +4,19 @@ import { BiShoppingBag } from "react-icons/bi";
 import { AiOutlineClose } from "react-icons/ai";
 import { useSelector } from "react-redux";
 import Carts from "../carts/carts";
+import { useNavigate } from "react-router-dom";
 const Card = () => {
   const [cartOpen, setCartOpen] = useState(false);
   let totalQuantity = useSelector((state) => state.productReducer.quantity);
   let cartItems = useSelector((state) => state.productReducer.cartItems);
   let subTotal = useSelector((state) => state.productReducer.sumTotal);
   let items = useSelector((state) => state.productReducer.cartItems);
+  let navigate = useNavigate();
+
+  const handleCheckout = () => {
+    navigate("/cart");
+    setCartOpen(false);
+  };
   return (
     <div className="cartMainDiv">
       <BiShoppingBag
@@ -38,7 +45,9 @@ const Card = () => {
             Subtotal:
             <span> ${subTotal}</span>
           </p>
-          <span className="checkout">Checkout</span>
+          <span className="checkout" onClick={handleCheckout}>
+            Checkout
+          </span>
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 .cartMainDiv {
   display: flex;
   align-items: self-start;
-  padding: 12px;
+  padding: 18px;
   margin-top: 6px;
 }
 .bagIcon {
@@ -24,7 +24,7 @@
   /* padding: 20px; */
   background-color: #fff9d0;
   box-shadow: 0 2px 4px rgb(0 0 0 / 8%);
-  z-index: 88;
+  /* z-index: 88; */
 }
 .cartClose {
   display: none;
